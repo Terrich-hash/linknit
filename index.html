@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="midnight">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsh Choudhary — linknit</title>
+  <meta name="description"
+    content="Harsh Choudhary | Software Engineer focused on AI/ML, Backend Development, Linux, and Homelab Infrastructure." />
+
+  <!-- OpenGraph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Harsh Choudhary — linknit" />
+  <meta property="og:description"
+    content="Software Engineer focused on AI/ML, Backend Development, Linux, and Homelab Infrastructure." />
+  <meta property="og:image" content="/avatar.png" />
+
+  <!-- Favicon using cat logo image -->
+  <link rel="icon" type="image/png" href="/avatar.png" />
+  <link rel="apple-touch-icon" href="/avatar.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Styling -->
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+
+<body>
+  <!-- Ambient Particle & Grid Canvas -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="glow-overlay"></div>
+  <div class="grid-pattern"></div>
+
+  <!-- Top Utilities Bar -->
+  <header class="top-nav">
+    <div class="brand">
+      <img src="/avatar.png" alt="linknit logo" class="brand-logo-img" />
+      <span class="brand-name">linknit</span>
+      <span class="brand-version">v1.0</span>
+    </div>
+
+    <div class="nav-controls">
+      <!-- Theme Selector Dropdown / Button -->
+      <button id="theme-btn" class="nav-btn" title="Change Visual Theme" aria-label="Toggle Theme">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+          </path>
+        </svg>
+        <span class="btn-label" id="current-theme-name">Midnight SRE</span>
+      </button>
+
+      <!-- Share / QR Button -->
+      <button id="share-btn" class="nav-btn icon-only" title="Share & QR Code" aria-label="Share Linktree">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+          <polyline points="16 6 12 2 8 6"></polyline>
+          <line x1="12" y1="2" x2="12" y2="15"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    <!-- Profile Card Section -->
+    <section class="profile-section">
+      <!-- Profile Avatar with Glowing Ring -->
+      <div class="avatar-wrapper">
+        <div class="avatar-glow"></div>
+        <div class="avatar-border">
+          <img src="/avatar.png" alt="Harsh Choudhary Logo" class="avatar-img" />
+        </div>
+        <div class="online-indicator" title="Available for projects & collaboration">
+          <span class="ping"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <!-- Identity Header -->
+      <div class="profile-header">
+        <h1 class="profile-name">
+          Harsh Choudhary
+          <span class="verified-badge" title="Verified Engineer">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+            </svg>
+          </span>
+        </h1>
+
+        <!-- Subtitle / Role with Typewriter Effect -->
+        <div class="profile-role">
+          <span class="terminal-prompt">$</span>
+          <span id="typewriter" class="typewriter-text">Software Engineer</span>
+          <span class="cursor">|</span>
+        </div>
+
+        <!-- Tech Stack Chips -->
+        <div class="tech-chips">
+          <span class="chip chip-ai"><i class="chip-icon">🤖</i> AI/ML</span>
+          <span class="chip chip-backend"><i class="chip-icon">⚙️</i> Backend</span>
+          <span class="chip chip-linux"><i class="chip-icon">🐧</i> Linux</span>
+          <span class="chip chip-infra"><i class="chip-icon">🖥️</i> Homelab Infra</span>
+        </div>
+
+        <!-- Bio Description -->
+        <p class="profile-bio">
+          Software Engineer focused on <strong>AI/ML</strong>, <strong>Backend Development</strong>,
+          <strong>Linux</strong>, and <strong>Homelab Infrastructure</strong>. I enjoy designing scalable systems,
+          experimenting with machine learning, and building reliable software from the ground up.
+        </p>
+
+        <!-- Uptime / System Status Badge (Non-clickable) -->
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span class="status-text">Public Uptime @ <strong>terrich-hash/homelab</strong> (99.98%)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="search-section">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="link-search" placeholder="Search links or tags (e.g. ml, linux, code)..."
+          aria-label="Search links" />
+        <button id="clear-search" class="clear-btn" hidden>&times;</button>
+      </div>
+
+      <!-- Quick Tag Filter Pills -->
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="all">All Links</button>
+        <button class="filter-pill" data-filter="code">Code & Repos</button>
+        <button class="filter-pill" data-filter="infra">Homelab</button>
+        <button class="filter-pill" data-filter="ai">AI / ML</button>
+        <button class="filter-pill" data-filter="contact">Contact</button>
+      </div>
+    </section>
+
+    <!-- Links Container Grid / Stack -->
+    <section id="links-container" class="links-stack">
+      <!-- Rendered dynamically via JavaScript -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-links">
+        <button id="copy-site-link" class="footer-btn">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          Copy linknit URL
+        </button>
+        <span class="dot-separator">•</span>
+        <span class="location-badge">📍 Asia/Kolkata</span>
+      </div>
+      <p class="copyright">
+        Designed & Built with ⚡ by <strong>Harsh Choudhary</strong> &copy; 2026
+      </p>
+    </footer>
+  </main>
+
+  <!-- Resume Preview Modal -->
+  <div id="resume-modal" class="modal-backdrop" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span class="modal-icon">📄</span>
+          <div>
+            <h3>Harsh Choudhary — Software Engineer Resume</h3>
+            <p>AI/ML • Backend • Linux • Infrastructure</p>
+          </div>
+        </div>
+        <button class="modal-close" id="close-resume-modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-preview-box">
+          <div class="resume-skeleton-header">
+            <h4>TECHNICAL SKILLS SUMMARY</h4>
+            <div class="skills-grid">
+              <div class="skill-cat">
+                <strong>Languages:</strong> Python, Go, C++, Rust, JavaScript, Bash
+              </div>
+              <div class="skill-cat">
+                <strong>AI/ML:</strong> PyTorch, TensorFlow, Scikit-Learn, OpenCV, LLM Fine-tuning
+              </div>
+              <div class="skill-cat">
+                <strong>Backend & Infra:</strong> Docker, Kubernetes, Linux (RHEL/Debian), PostgreSQL, Redis, FastAPI,
+                Nginx
+              </div>
+              <div class="skill-cat">
+                <strong>Homelab:</strong> Proxmox VE, Ansible, Cloudflare Tunnels, Grafana/Prometheus
+              </div>
+            </div>
+          </div>
+          <div class="resume-skeleton-body">
+            <h4>HIGHLIGHTED EXPERIENCE & PROJECTS</h4>
+            <ul>
+              <li><strong>Distributed Homelab Cluster:</strong> Built high-availability Proxmox HA cluster running
+                automated microservices with automated Terraform/Ansible pipelines.</li>
+              <li><strong>AI Video/Audio Analytics Engine:</strong> Trained lightweight deep learning models for
+                real-time inference with optimized TensorRT runtimes.</li>
+              <li><strong>Scalable Backend Services:</strong> Architected asynchronous REST/gRPC API microservices
+                supporting high throughput and low-latency workloads.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://terrich-hash.github.io/portfolio_harsh/#homelab" target="_blank" rel="noopener noreferrer"
+          class="modal-btn primary">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          View Full Portfolio & CV
+        </a>
+        <button class="modal-btn secondary" id="close-resume-btn">Close Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Code Share Modal -->
+  <div id="share-modal" class="modal-backdrop" hidden>
+    <div class="modal-card mini">
+      <div class="modal-header">
+        <h3>Share linknit Profile</h3>
+        <button class="modal-close" id="close-share-modal">&times;</button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="qr-container">
+          <svg class="qr-code-svg" viewBox="0 0 200 200" width="180" height="180">
+            <rect width="200" height="200" fill="#ffffff" rx="16" />
+            <rect x="20" y="20" width="50" height="50" fill="#0f172a" rx="8" />
+            <rect x="30" y="30" width="30" height="30" fill="#ffffff" rx="4" />
+            <rect x="38" y="38" width="14" height="14" fill="#10b981" rx="2" />
+
+            <rect x="130" y="20" width="50" height="50" fill="#0f172a" rx="8" />
+            <rect x="140" y="30" width="30" height="30" fill="#ffffff" rx="4" />
+            <rect x="148" y="38" width="14" height="14" fill="#3b82f6" rx="2" />
+
+            <rect x="20" y="130" width="50" height="50" fill="#0f172a" rx="8" />
+            <rect x="30" y="140" width="30" height="30" fill="#ffffff" rx="4" />
+            <rect x="38" y="148" width="14" height="14" fill="#8b5cf6" rx="2" />
+
+            <circle cx="90" cy="35" r="5" fill="#0f172a" />
+            <circle cx="105" cy="45" r="5" fill="#10b981" />
+            <circle cx="90" cy="60" r="5" fill="#3b82f6" />
+
+            <circle cx="45" cy="90" r="5" fill="#0f172a" />
+            <circle cx="65" cy="90" r="5" fill="#8b5cf6" />
+            <circle cx="85" cy="90" r="5" fill="#0f172a" />
+            <circle cx="105" cy="90" r="5" fill="#10b981" />
+            <circle cx="125" cy="90" r="5" fill="#0f172a" />
+            <circle cx="155" cy="90" r="5" fill="#ef4444" />
+
+            <circle cx="90" cy="115" r="5" fill="#3b82f6" />
+            <circle cx="110" cy="115" r="5" fill="#0f172a" />
+            <circle cx="130" cy="115" r="5" fill="#8b5cf6" />
+
+            <circle cx="90" cy="145" r="5" fill="#0f172a" />
+            <circle cx="110" cy="155" r="5" fill="#10b981" />
+            <circle cx="130" cy="145" r="5" fill="#0f172a" />
+            <circle cx="155" cy="155" r="5" fill="#3b82f6" />
+            <circle cx="165" cy="135" r="5" fill="#0f172a" />
+
+            <rect x="80" y="80" width="40" height="40" fill="#0f172a" rx="10" />
+            <text x="100" y="105" font-family="monospace" font-weight="bold" font-size="18" fill="#10b981"
+              text-anchor="middle">HN</text>
+          </svg>
+        </div>
+        <p class="qr-subtext">Scan with any smartphone camera to open <strong>linknit</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button id="copy-qr-link" class="modal-btn primary full-width">Copy Profile Link</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Alert -->
+  <div id="toast" class="toast-container" hidden>
+    <div class="toast-content">
+      <span class="toast-icon" id="toast-icon">📋</span>
+      <span class="toast-msg" id="toast-msg">Email copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- JavaScript Entry Point -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

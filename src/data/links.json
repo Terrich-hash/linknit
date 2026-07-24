@@ -1,0 +1,154 @@
+{
+  "profile": {
+    "name": "Harsh Choudhary",
+    "handle": "@Terrich-hash",
+    "siteName": "linknit",
+    "title": "Software Engineer | AI/ML & Infrastructure",
+    "roles": [
+      "AI/ML Engineer",
+      "Backend Developer",
+      "Linux Enthusiast",
+      "Homelab Architect"
+    ],
+    "bio": "Software Engineer focused on AI/ML, Backend Development, Linux, and Homelab Infrastructure. I enjoy designing scalable systems, experimenting with machine learning, and building reliable software from the ground up.",
+    "avatar": "/avatar.png",
+    "status": {
+      "text": "All Systems Operational",
+      "uptime": "99.98%",
+      "domain": "terrich-hash.github.io/homelab",
+      "url": "https://terrich-hash.github.io/homelab/"
+    },
+    "email": "hc000269@gmail.com"
+  },
+  "links": [
+    {
+      "id": "homelab-doc",
+      "title": "Homelab & Infrastructure Docs",
+      "subtitle": "Self-hosted clusters, Kubernetes, Proxmox & Ansible automation",
+      "url": "https://terrich-hash.github.io/homelab/",
+      "icon": "server",
+      "badge": "Infrastructure",
+      "color": "emerald",
+      "themeColor": "#10b981",
+      "tags": [
+        "homelab",
+        "linux",
+        "docker",
+        "kubernetes",
+        "proxmox",
+        "ansible",
+        "sysadmin"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "title": "Interactive Portfolio",
+      "subtitle": "Explore my featured AI/ML models, backend architectures & projects",
+      "url": "https://terrich-hash.github.io/portfolio_harsh/",
+      "icon": "briefcase",
+      "badge": "Projects",
+      "color": "purple",
+      "themeColor": "#8b5cf6",
+      "tags": [
+        "portfolio",
+        "projects",
+        "ai",
+        "ml",
+        "backend",
+        "fullstack"
+      ]
+    },
+    {
+      "id": "github",
+      "title": "GitHub: @Terrich-hash",
+      "subtitle": "Open-source projects, ML experiments & backend microservices",
+      "url": "https://github.com/Terrich-hash",
+      "icon": "github",
+      "badge": "Code",
+      "color": "slate",
+      "themeColor": "#475569",
+      "tags": [
+        "github",
+        "code",
+        "repos",
+        "open-source",
+        "python",
+        "go",
+        "rust"
+      ]
+    },
+    {
+      "id": "blog",
+      "title": "Personal Tech Blog & Notes",
+      "subtitle": "Deep-dives into ML models, Linux kernel tweaks & distributed systems",
+      "url": "https://terrich-hash.github.io/terrich_blog/",
+      "icon": "rss",
+      "badge": "Articles",
+      "color": "ruby",
+      "themeColor": "#ef4444",
+      "tags": [
+        "blog",
+        "writing",
+        "articles",
+        "notes",
+        "tutorials",
+        "linux",
+        "ai"
+      ]
+    },
+    {
+      "id": "resume",
+      "title": "Software Engineer Resume",
+      "subtitle": "Download CV / View technical background & work experience",
+      "url": "#resume-modal",
+      "action": "modal",
+      "icon": "file-text",
+      "badge": "CV",
+      "color": "sapphire",
+      "themeColor": "#3b82f6",
+      "tags": [
+        "resume",
+        "cv",
+        "experience",
+        "hire",
+        "work",
+        "skills"
+      ]
+    },
+    {
+      "id": "linkedin",
+      "title": "LinkedIn: Harsh Choudhary",
+      "subtitle": "Connect with me professionally & view career history",
+      "url": "https://www.linkedin.com/in/harsh-choudhary-51b081200/",
+      "icon": "linkedin",
+      "badge": "Network",
+      "color": "cyan",
+      "themeColor": "#06b6d4",
+      "tags": [
+        "linkedin",
+        "network",
+        "career",
+        "professional",
+        "contact"
+      ]
+    },
+    {
+      "id": "gmail",
+      "title": "Direct Contact / Email",
+      "subtitle": "hc000269@gmail.com (Click to copy or send mail)",
+      "url": "mailto:hc000269@gmail.com",
+      "action": "copy-email",
+      "icon": "mail",
+      "badge": "Contact",
+      "color": "rose",
+      "themeColor": "#f43f5e",
+      "tags": [
+        "email",
+        "gmail",
+        "contact",
+        "message",
+        "hire"
+      ]
+    }
+  ]
+}
