@@ -1,5 +1,6 @@
 import data from '../data/links.json';
 import { initParticles } from './particles.js';
+import QRCode from 'qrcode';
 
 // SVG Icon map for dynamic SVG injection
 const ICONS = {
@@ -15,9 +16,9 @@ const ICONS = {
 
 const THEMES = [
   { id: 'midnight', name: 'Midnight SRE' },
+  { id: 'light', name: 'Daylight Clean' },
   { id: 'cyberpunk', name: 'Cyberpunk Neon' },
-  { id: 'monokai', name: 'Monokai Dark' },
-  { id: 'matrix', name: 'Terminal Matrix' }
+  { id: 'monokai', name: 'Monokai Dark' }
 ];
 
 let currentThemeIndex = 0;
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initModals();
   initCopyActions();
+  renderQRCode();
 });
 
 /* --------------------------------------------------------------------------
@@ -46,7 +48,7 @@ function initTypewriter() {
 
   function type() {
     const currentRole = roles[roleIdx];
-    
+
     if (isDeleting) {
       el.textContent = currentRole.substring(0, charIdx - 1);
       charIdx--;
@@ -283,12 +285,43 @@ function initModals() {
 
 function openModal(id) {
   const modal = document.getElementById(id);
-  if (modal) modal.hidden = false;
+  if (modal) {
+    modal.hidden = false;
+    if (id === 'share-modal') {
+      renderQRCode();
+    }
+  }
 }
 
 function closeModal(id) {
   const modal = document.getElementById(id);
   if (modal) modal.hidden = true;
+}
+
+function renderQRCode() {
+  const container = document.getElementById('qr-container');
+  if (!container) return;
+
+  const targetUrl = (window.location.origin && !window.location.href.includes('localhost') && !window.location.href.includes('127.0.0.1'))
+    ? window.location.href
+    : 'https://terrich-hash.github.io/linknit/';
+
+  QRCode.toString(targetUrl, {
+    type: 'svg',
+    margin: 1,
+    errorCorrectionLevel: 'M',
+    color: {
+      dark: '#0d1117',
+      light: '#ffffff'
+    },
+    width: 200
+  }, (err, svgString) => {
+    if (err) {
+      console.error('Error generating QR code:', err);
+      return;
+    }
+    container.innerHTML = svgString;
+  });
 }
 
 function initCopyActions() {
@@ -321,7 +354,7 @@ function showToast(message, icon = '📋') {
 }
 
 function escapeHtml(str) {
-  return str.replace(/[&<>"']/g, function(m) {
+  return str.replace(/[&<>"']/g, function (m) {
     return {
       '&': '&amp;',
       '<': '&lt;',

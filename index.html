@@ -6,18 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harsh Choudhary — linknit</title>
   <meta name="description"
-    content="Harsh Choudhary | Software Engineer focused on AI/ML, Backend Development, Linux, and Homelab Infrastructure." />
+    content="Harsh Choudhary | Software Engineer building scalable backend systems, AI/ML models, and homelab infrastructure." />
 
   <!-- OpenGraph / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Harsh Choudhary — linknit" />
   <meta property="og:description"
-    content="Software Engineer focused on AI/ML, Backend Development, Linux, and Homelab Infrastructure." />
+    content="Software Engineer building scalable backend systems, AI/ML models, and homelab infrastructure." />
   <meta property="og:image" content="./avatar.png" />
 
   <!-- Favicon using cat logo image -->
-  <link rel="icon" type="image/png" href="./avatar.png" />
-  <link rel="apple-touch-icon" href="./avatar.png" />
+  <link rel="icon" type="image/png" href="./logo.png" />
+  <link rel="apple-touch-icon" href="./logo.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
   <!-- Top Utilities Bar -->
   <header class="top-nav">
     <div class="brand">
-      <img src="./avatar.png" alt="linknit logo" class="brand-logo-img" />
+      <img src="./logo.png" alt="linknit logo" class="brand-logo-img" />
       <span class="brand-name">linknit</span>
       <span class="brand-version">v1.0</span>
     </div>
@@ -73,9 +73,8 @@
   <main class="container">
     <!-- Profile Card Section -->
     <section class="profile-section">
-      <!-- Profile Avatar with Glowing Ring -->
+      <!-- Profile Avatar -->
       <div class="avatar-wrapper">
-        <div class="avatar-glow"></div>
         <div class="avatar-border">
           <img src="./avatar.png" alt="Harsh Choudhary Logo" class="avatar-img" />
         </div>
@@ -113,9 +112,8 @@
 
         <!-- Bio Description -->
         <p class="profile-bio">
-          Software Engineer focused on <strong>AI/ML</strong>, <strong>Backend Development</strong>,
-          <strong>Linux</strong>, and <strong>Homelab Infrastructure</strong>. I enjoy designing scalable systems,
-          experimenting with machine learning, and building reliable software from the ground up.
+          Software Engineer building <strong>scalable backend systems</strong>, <strong>AI/ML models</strong>, and
+          <strong>homelab infrastructure</strong>.
         </p>
 
         <!-- Uptime / System Status Badge (Non-clickable) -->
@@ -167,7 +165,7 @@
         <span class="location-badge">📍 Asia/Kolkata</span>
       </div>
       <p class="copyright">
-        Designed & Built with ⚡ by <strong>Harsh Choudhary</strong> &copy; 2026
+        Designed & Built by <strong>terrich</strong> &copy; 2026
       </p>
     </footer>
   </main>
@@ -243,47 +241,7 @@
         <button class="modal-close" id="close-share-modal">&times;</button>
       </div>
       <div class="modal-body text-center">
-        <div class="qr-container">
-          <svg class="qr-code-svg" viewBox="0 0 200 200" width="180" height="180">
-            <rect width="200" height="200" fill="#ffffff" rx="16" />
-            <rect x="20" y="20" width="50" height="50" fill="#0f172a" rx="8" />
-            <rect x="30" y="30" width="30" height="30" fill="#ffffff" rx="4" />
-            <rect x="38" y="38" width="14" height="14" fill="#10b981" rx="2" />
-
-            <rect x="130" y="20" width="50" height="50" fill="#0f172a" rx="8" />
-            <rect x="140" y="30" width="30" height="30" fill="#ffffff" rx="4" />
-            <rect x="148" y="38" width="14" height="14" fill="#3b82f6" rx="2" />
-
-            <rect x="20" y="130" width="50" height="50" fill="#0f172a" rx="8" />
-            <rect x="30" y="140" width="30" height="30" fill="#ffffff" rx="4" />
-            <rect x="38" y="148" width="14" height="14" fill="#8b5cf6" rx="2" />
-
-            <circle cx="90" cy="35" r="5" fill="#0f172a" />
-            <circle cx="105" cy="45" r="5" fill="#10b981" />
-            <circle cx="90" cy="60" r="5" fill="#3b82f6" />
-
-            <circle cx="45" cy="90" r="5" fill="#0f172a" />
-            <circle cx="65" cy="90" r="5" fill="#8b5cf6" />
-            <circle cx="85" cy="90" r="5" fill="#0f172a" />
-            <circle cx="105" cy="90" r="5" fill="#10b981" />
-            <circle cx="125" cy="90" r="5" fill="#0f172a" />
-            <circle cx="155" cy="90" r="5" fill="#ef4444" />
-
-            <circle cx="90" cy="115" r="5" fill="#3b82f6" />
-            <circle cx="110" cy="115" r="5" fill="#0f172a" />
-            <circle cx="130" cy="115" r="5" fill="#8b5cf6" />
-
-            <circle cx="90" cy="145" r="5" fill="#0f172a" />
-            <circle cx="110" cy="155" r="5" fill="#10b981" />
-            <circle cx="130" cy="145" r="5" fill="#0f172a" />
-            <circle cx="155" cy="155" r="5" fill="#3b82f6" />
-            <circle cx="165" cy="135" r="5" fill="#0f172a" />
-
-            <rect x="80" y="80" width="40" height="40" fill="#0f172a" rx="10" />
-            <text x="100" y="105" font-family="monospace" font-weight="bold" font-size="18" fill="#10b981"
-              text-anchor="middle">HN</text>
-          </svg>
-        </div>
+        <div class="qr-container" id="qr-container"></div>
         <p class="qr-subtext">Scan with any smartphone camera to open <strong>linknit</strong></p>
       </div>
       <div class="modal-footer">
