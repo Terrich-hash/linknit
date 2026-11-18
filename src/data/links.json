@@ -11,14 +11,14 @@
       "Homelab Architect"
     ],
     "bio": "Software Engineer building scalable backend systems, AI/ML models, and homelab infrastructure.",
-    "avatar": "/avatar.png",
+    "avatar": "/1000160198.png",
     "status": {
       "text": "All Systems Operational",
       "uptime": "99.98%",
       "domain": "terrich-hash.github.io/homelab",
       "url": "https://terrich-hash.github.io/homelab/"
     },
-    "email": "hc000269@gmail.com"
+    "email": "harshchoudhary@terrich.dev"
   },
   "links": [
     {
@@ -100,7 +100,7 @@
       "id": "resume",
       "title": "Software Engineer Resume",
       "subtitle": "Download CV / View technical background & work experience",
-      "url": "https://drive.google.com/file/d/1GskUaHg82JGM7KiS4uMEitflhQeR9_kE/view?usp=sharing",
+      "url": "https://terrich.dev/resume.pdf",
       "action": "modal",
       "icon": "file-text",
       "badge": "CV",
@@ -135,8 +135,8 @@
     {
       "id": "gmail",
       "title": "Direct Contact / Email",
-      "subtitle": "hc000269@gmail.com (Click to copy or send mail)",
-      "url": "mailto:hc000269@gmail.com",
+      "subtitle": "harshchoudhary@terrich.dev (Click to copy or send mail)",
+      "url": "mailto:harshchoudhary@terrich.dev",
       "action": "copy-email",
       "icon": "mail",
       "badge": "Contact",

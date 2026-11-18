@@ -156,7 +156,7 @@ function attachCardEvents() {
         openModal('resume-modal');
       } else if (action === 'copy-email') {
         e.preventDefault();
-        copyToClipboard(data.profile.email, 'Email harshchoudhary@gmail.com copied!');
+        copyToClipboard(data.profile.email, `Email ${data.profile.email} copied!`);
       }
     });
   });
